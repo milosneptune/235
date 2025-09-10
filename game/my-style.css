@@ -5,19 +5,28 @@ html {
 body {
     background-color: #D4FFEA;
     font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Verdana, sans-serif;
+    text-align: center;
 }
 
 h1 {
-    color: red;
+    color: #E21E02;
     font-family: 'Jersey 10', 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Verdana, sans-serif;
     border-bottom: 8px solid #2a2a96;
     font-size: 3.5rem;
+    letter-spacing: 3px;
 }
 
-h2, h3, h4 {
+h2,
+h3,
+h4 {
     font-family: 'Jersey 10', 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Verdana, sans-serif;
     font-size: 2rem;
-    
+    letter-spacing: 3px;
+}
+
+h3,
+h4 {
+    color: #2a2a96;
 }
 
 p {
@@ -34,14 +43,38 @@ span {
     background-color: #A3DFCA;
 }
 
-.side {
+.right {
     margin-right: 10px;
     margin-top: 20px;
-    float: right;
+    float: center;
     transform: rotate(5deg);
+}
+
+.surprise
+{
+    margin: 30px;
 }
 
 ul li b,
 p b {
     color: #E21E02;
+}
+
+ul {
+    max-width: 15%;
+    margin: auto;
+    text-align: left;
+}
+
+a {
+    color: rgb(0, 68, 255);
+}
+
+hr {
+    border-width: 3px;
+    border-style: solid;
+    color: rgb(255, 187, 0);
+    margin-top: 2rem;
+    margin-left: 15rem;
+    margin-right: 15rem;
 }
