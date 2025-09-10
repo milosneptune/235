@@ -1,46 +1,47 @@
-h1 {
-    color: red;
-    font-family: sans-serif;
-    border-bottom: 3px solid blue;
-    }
-
-h2, h3, h4 {
-    font-family: 'Jersey 10';
-    }
-
-h3, h4 {
-    font-size: 25px;
+html {
+    font-size: 100%
 }
 
-blockquote {
-    background-color: rgb(194, 184, 154);
-    padding: 1rem;
-    }
-
 body {
-    background-color: #ffe9c6;
-    font-family:'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Verdana, sans-serif;
-    }
+    background-color: #D4FFEA;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Verdana, sans-serif;
+}
 
-span {
-    background-color: rgb(255, 157, 115);
-    }
+h1 {
+    color: red;
+    font-family: 'Jersey 10', 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Verdana, sans-serif;
+    border-bottom: 8px solid #2a2a96;
+    font-size: 3.5rem;
+}
+
+h2, h3, h4 {
+    font-family: 'Jersey 10', 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Verdana, sans-serif;
+    font-size: 2rem;
+    
+}
 
 p {
     margin-left: 50px;
-    }
+}
+
+
+blockquote {
+    background-color: #A3DFCA;
+    padding: 1rem;
+}
+
+span {
+    background-color: #A3DFCA;
+}
 
 .side {
     margin-right: 10px;
     margin-top: 20px;
     float: right;
     transform: rotate(5deg);
-    }
+}
 
-ul li>b {
-    color:brown;
-    }
-
+ul li b,
 p b {
-    color: brown;
-    }
+    color: #E21E02;
+}
