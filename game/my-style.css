@@ -8,6 +8,13 @@ body {
     text-align: center;
 }
 
+main, footer {
+    /* border: 1px solid black; */
+    margin: 0 auto;
+    width: 80vw;
+    padding: 2rem;
+}
+
 h1 {
     color: #E21E02;
     font-family: 'Jersey 10', 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Verdana, sans-serif;
