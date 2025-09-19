@@ -1,5 +1,12 @@
-.flex-container
-{
+body {
     display: flex;
-    color: blue;
+    flex-direction: row;
+    justify-content: space-around;
+    flex-wrap: wrap;
+}
+
+footer {
+    align-self: flex-end;
+    flex:0 0 100%;
+    max-width: 100%;
 }
