@@ -5,7 +5,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
-    <link rel="stylesheet" href="../styles/home-style.css">
+    <link rel="stylesheet" href="styles/home-style.css">
     <style>
         @import url('https://fonts.googleapis.com/css2?family=Amarante&display=swap');
         @import url('https://fonts.googleapis.com/css2?family=Funnel+Display:wght@300..800&family=Patrick+Hand&display=swap');
@@ -20,37 +20,42 @@
                 <div id="righttop">
                     <h1>Milo Qureshi</h1>
                     <h2>Rochester Institute of Technology</h2>
-                    <img src="images/potrait.png" alt="Potrait" width="250">
+                    <div class="polaroid"><img id="you" src="images/potrait.jpg" alt="Potrait"></div>
                 </div>
             </header>
-            <div id="lefttop">
-                <h2>Hello!</h2>
-                <p>
-                    I'm a 2nd year <b>GDD</b> student looking to create their own portfolio using the skills they gain through
-                    IGME-235, Intro to Web Development. Currently, I'm a game designer and a 2D artist for
-                    <i>echoes</i>,
-                    which is a vertically integrated project at RIT. I'm skilled in game and web development, 3D
-                    modeling,
-                    and 2D digital design.
-                </b>
-            </div>
+            <section id="omgbruh">
+                <div id="decor"></div>
+                <div id="hello"></div>
+                <div id="lefttop">
+                    <h2>Hello!</h2>
+                    <p>
+                        I'm a 2nd year <b>GDD</b> student looking to create their own portfolio using the skills they gain
+                        through
+                        IGME-235, Intro to Web Development. Currently, I'm a game designer and a 2D artist for
+                        <a href="https://www.echoes-vip.org/"><i>echoes</i></a>,
+                        which is a vertically integrated project at RIT. I'm skilled in game and web development, 3D
+                        modeling,
+                        and 2D digital design.
+                    </p>
+                </div>
+            </section>
         </section>
         <section id="below">
             <div id="projects">
                 <h3>Projects!</h3>
-                <p>
                     <ul>
-                        <li>link 1</li>
-                        <li>link 2</li>
-                        <li>link 3</li>
+                        <li class="color">link 1</li>
+                        <li class="color">link 2</li>
+                        <li class="color">link 3</li>
                     </ul>
-                </p>
             </div>
             <!-- make this link look better -->
             <div id="sites">
-                <h4>Github</h4>
+                <h4>Sites</h4>
                 <p>
-                    https://github.com/milosneptune
+                    <a href="https://github.com/milosneptune" target="_blank">Github</a><br>
+                    <a href="https://www.linkedin.com/in/milo-qureshi/" target="_blank">LinkedIn</a><br>
+                    <a href="https://milosneptune.itch.io/" target="_blank">itch.io</a>
                 </p>
             </div>
         </section>
@@ -59,8 +64,7 @@
 
     <footer id="bottom">
         <p>
-            <br>this must be the bottom.
-            <br>author, itch io, sources for assets
+            <br>Milo Qureshi wrote this page
         </p>
     </footer>
 </body>

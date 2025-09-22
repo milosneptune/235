@@ -28,7 +28,6 @@ header {
 }
 
 
-
 h1,
 h2,
 h3,
@@ -46,13 +45,14 @@ h2 {
 h1,
 div#lefttop>h2 {
     font-family: 'Amarante', 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
-    color: #5D688A;
+    color: #82466a;
     font-size: 2rem;
     letter-spacing: 6px;
 }
 
 div#lefttop>h2 {
     background-color: #FFF2EF;
+    border-radius: 10%;
 }
 
 h1 {
@@ -63,8 +63,12 @@ h3,
 h4 {
     font-family: 'Amarante', 'Gill Sans', 'Gill Sans MT', 'Trebuchet MS', sans-serif;
     color: #5D688A;
-    letter-spacing: 6px;
+    letter-spacing: 3px;
     font-size: 18.72px;
+}
+
+h4 {
+    margin: 10px;
 }
 
 div {
@@ -75,7 +79,8 @@ div {
 }
 
 p,
-ul {
+ul,
+a {
     font-family: 'Gill Sans', 'Gill Sans MT', 'Trebuchet MS', sans-serif;
     letter-spacing: 1px;
 }
@@ -106,6 +111,9 @@ div#lefttop p {
 #below {
     display: flex;
     justify-content: center;
+    background-color: #F7A5A5;
+    margin: 5%;
+    border-radius: 10px;
 }
 
 #projects {
@@ -114,11 +122,81 @@ div#lefttop p {
 }
 
 #sites {
-    flex-direction: column;
     justify-content: space-evenly;
 }
 
 footer {
     flex: 0 0 100%;
     max-width: 100%;
+    color:#82466a;
+}
+
+b {
+    color: #5D688A;
+}
+#you{
+    width: 15vw;
+}
+
+div.polaroid {
+    display: flex;
+    justify-content: center;
+    width: 15vw;
+    height: 17vw;
+    background-color: white;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+    position: relative;
+    top: -20px;
+}
+
+#decor {
+    display: flex;
+    margin: 0;
+    height: 100px;
+    width: 100px;
+    background-image: url("../images/big-dot.svg");
+    background-repeat: no-repeat;
+    background-position: center center;
+    background-size: cover;
+    position: absolute;
+    top: 200px;
+    left: 35%;
+}
+
+#hello {
+    display: flex;
+    margin: 0;
+    height: 100px;
+    width: 100px;
+    background-image: url("../images/lil-dot.svg");
+    background-repeat: no-repeat;
+    background-position: center center;
+    background-size: cover;
+    position: absolute;
+    top: 210px;
+    left: 45%;
+}
+
+li.color {
+    color: #5D688A;
+}
+
+a {
+    color: #5D688A;
+}
+
+a:link {
+    color: #5D688A;
+}
+
+a:visited {
+    color: #82466a;
+}
+
+a:hover {
+    color: #ffffff;
+}
+
+a:active {
+    color: #ffb468;
 }
