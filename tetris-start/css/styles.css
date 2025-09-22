@@ -33,8 +33,12 @@ div.tet img {
     margin: 10px;
 }
 
-div.tet.sqaure img {
-    width: 10%;
+div.tet.square img {
+    width: 40%;
+}
+
+div.tet.long img {
+    width: 80%;
 }
 
 span.name {
