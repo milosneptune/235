@@ -47,11 +47,11 @@ Grid Formatting
     height: 100vh;
     grid-template-rows: 1fr 2fr 10fr 2fr 1fr;
     grid-template-areas: "header"
-        "navbar"
-        "content"
-        "sidebar"
-        "footer";
-
+                        "navbar"
+                        "content"
+                        "sidebar"
+                        "footer";
+    max-width: 1200px;
 }
 
 @media screen and (min-width: 760px) {
@@ -59,11 +59,19 @@ Grid Formatting
         grid-template-rows: 1fr 10fr 1fr;
         grid-template-columns: 20% 1fr 20%;
         grid-template-areas: "header header header"
-            "navbar content sidebar"
-            "footer footer footer";
-
+                            "navbar content sidebar"
+                            "footer footer footer";
     }
 }
+
+@media screen and (min-width: 1200px)
+{
+    #wrapper {
+        height: 96vh;
+        margin: 2em auto;
+    }
+}
+
 
 header {
     grid-area: header;
