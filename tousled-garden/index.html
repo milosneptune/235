@@ -1,0 +1,287 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta http-equiv="content-type" content="text/html; charset=utf-8">
+
+  <!--rg the above stuff is essential to declare this as a valid HTML page and generally shouldn't be messed with-->
+  <!--rg The arrow/exclamation/double-hyphen indicates a comment (not parsed by browser) and is then closed with a double-hyphen/closed arrow-->
+  <!--rg In this document, you're going to see 3 kinds of code: HTML, Javascript(JS), and CSS (Cascading Style Sheets)
+HTML - in arrowed brackets. Generally structures the document, declaring different parts
+CSS - can be inside a Style tag, inside specific tags, or in a separate file altogether. Generally structures look and feel
+JS - can be inside a Script tag, inside specific tags, or in a separate file altogether. Generally adds functionality, which may including changing look and feel
+-->
+
+  <!--
+Nick Montfort
+ Original Python program:
+ 8 January 2009, Taroko Gorge National Park, Taiwan and Eva Air Flight 28
+ This JavaScript version, with links:
+ 1 March 2016
+
+        rg: is it the same piece after it's been ported???? can you think of recombination as porting to different platforms in slightly different ways?
+
+Copyright (c) 2009-2016 Nick Montfort <nickm@nickm.com>
+
+Permission to use, copy, modify, and/or distribute this software for any
+purpose with or without fee is hereby granted, provided that the above
+copyright notice and this permission notice appear in all copies.
+
+THE SOFTWARE IS PROVIDED "AS IS" AND THE AUTHOR DISCLAIMS ALL WARRANTIES
+WITH REGARD TO THIS SOFTWARE INCLUDING ALL IMPLIED WARRANTIES OF
+MERCHANTABILITY AND FITNESS. IN NO EVENT SHALL THE AUTHOR BE LIABLE FOR ANY
+SPECIAL, DIRECT, INDIRECT, OR CONSEQUENTIAL DAMAGES OR ANY DAMAGES
+WHATSOEVER RESULTING FROM LOSS OF USE, DATA OR PROFITS, WHETHER IN AN
+ACTION OF CONTRACT, NEGLIGENCE OR OTHER TORTIOUS ACTION, ARISING OUT OF OR
+IN CONNECTION WITH THE USE OR PERFORMANCE OF THIS SOFTWARE.
+-->
+
+
+  <!--rg the next lines (between style tags) are CSS, or Cascading Style Sheets information. This information generally governs the look and feel of a document, including things like color, font, placement.
+
+To start figuring this out, you can cross-reference the primary items (like body, div, a) to where those elements can be found later on in the page. Therefore every div tag will be set to a height of 16 pt; every link will have a color of #117.
+
+Try messing with the background color!
+-->
+
+  <style type="text/css">
+    @import url('https://fonts.googleapis.com/css2?family=Simonetta:ital,wght@0,400;0,900;1,400;1,900&display=swap');
+
+    /* <![CDATA[ */
+    body {
+      background: rgb(127, 199, 118);
+      color: #dad;
+      margin: 0 24pt 0 24pt;
+      font-family: Simonetta, sans-serif;
+      font-size: 17pt;
+    }
+
+    div {
+      height: 16pt;
+      padding: 5px;
+      color: rgb(0, 0, 0);
+    }
+
+    a {
+      color: #876;
+      text-decoration: none;
+    }
+
+    /* ]]> */
+  </style>
+
+  <!--rg Okay, here's the Javascript. This is where 99% of the functionality of Taroko Gorge lives.
+Notice that, inside the <script> tags, I'm going to be commenting a bit differently; that's because a Javascript comment has the syntax //.
+-->
+
+  <script type="text/javascript">
+    var t = 0;
+    var t2 = 0;
+    var n = 0;
+    var paths = 0;
+
+    //rg notice there aren't a lot of words here. 
+    //mist trails the basin
+    //brow commands the rocks
+    //part of the fun is trying to figure out how it works
+    //above, trans, (the) below
+
+    // and the poetic form: a couplet, a line with hyphen
+    //translate the objective clear
+    //imper, adjs, adjs
+
+    //brows dwell
+    //above, imper
+
+    //split simply Splits a string into an array of substrings, so that, for example, above is an array
+    //https://www.w3schools.com/jsref/
+
+    var above = 'bosquet,layer,the arch,vine,height,canopy,rich,wisteria,lavender,clematis,garden,leaf,fence,pollen,lily,amaryllis,lock'.split(',');
+    var below = 'flow,pinery,shape,grove,vein,thriving,rippling,stone,lush,lawn,sunken,pebble,seed,path,flower,rose,dahlia,pond,shrub,moss,flora,braid'.split(',');
+    var trans = 'flower,roam,trail,cascade,clump,soil,wall,climb,tower,weed,tangle,knot'.split(',');
+    var imper = 'charm,shade,entangle,tend,foster,cultivate,wilt,grow,nurse,freshen,curl,coil,comb,brush';
+    imper = imper.split(',');
+    var intrans = 'linger,dwell,rest,relax,hold,dream,hum,slow,ease,respite,slumber,hollow'.split(',');
+    var s = 's,'.split(',');
+    var texture = 'dense,thick,silky,coarse,'.split(',');
+
+    //functions perform certain tasks that will be called later. look down the road for "rand_range", for example in the path function.
+
+    //rg math.floor returns the largest integer of a number - 5.05 will return 5
+    //rg math.random returns a random number between 0 and 1, multiplies times max+1, then returning the floor integer. Designed to get a random number of a particular size.
+
+    function rand_range(max) {
+      return Math.floor(Math.random() * (max + 1));
+    }
+
+    //rg the choose function chooses one of the arrays which contain text. This will select a particular item in a text array.    
+    //rg you can see this function called in path, used in path, cave, and site functions below, which all generate one line of content
+    function choose(array) {
+      return array[rand_range(array.length - 1)];
+    }
+
+    //rg notice that all of a sudden, the naming of variables becomes part of the poem: path, site, cave
+    //the path function develops a line starting with elements in the "above" array.
+
+    /*
+    The path function can generate two possible line types:
+    (monkeys + verb made singular) OR (word made plural + verb made singular) + the + word (singular or plural)
+    layers (above) trail (trans) the shape (below)
+    
+    Much of this work is to deal with singular/plural issues
+    */
+
+    function path() {
+      var p = rand_range(1);
+      var words = choose(above);
+
+      if ((words == 'canopy' || words == 'lily') && (rand_range(3) == 1)) { // this doesnt work lol
+        words.replace('y', 'ies');
+        words += ' ' + choose(trans);
+        console.log(words);
+      }
+
+      else {
+        words += s[p] + ' ' + choose(trans) + s[(p + 1) % 2];
+      }
+
+      words += ' the ' + choose(below) + choose(s) + '.';
+      return words;
+    }
+
+    //another way of generating a line
+    //notice the plurals happening here!
+
+    /*
+    The site function generates the two-word lines
+    The site function can generate two possible line types:
+    (word from Above) OR (word from Below) + (first word made plural) + (word from intrans)
+    */
+
+    function site() {
+      var words = '';
+
+      if (rand_range(2) == 1) {
+        words += choose(above);
+      }
+
+      else {
+        words += choose(below);
+      }
+
+      words += 's ' + choose(intrans) + '.';
+      return words;
+    }
+
+    //a third way of generating a line - these are the hyphenated lines
+    /*
+    
+      stamp the straight arched clear driven —
+      translate the straight objective dim —
+    
+    (spaces + word from imper + the + a string of adjectives + hyphen)
+    
+    */
+
+    function cave() {
+      var adjs = (choose(texture) + ',manicured,bloom,dim,secret,bright').split(',');
+      var target = 1 + rand_range(2);
+      while (adjs.length > target) {
+        adjs.splice(rand_range(adjs.length), 1);
+      }
+      var words = '\u00a0\u00a0' + choose(imper) + ' the ' + adjs.join(' ') + '\u2014';
+      return words;
+    }
+
+    //rg the do_line function here assembles a given line of text    
+    function do_line() {
+      var main = document.getElementById('main');
+      var spaces = '\u00a0\u00a0\u00a0';
+      var indent;
+
+      //if just starting to run, add a line, else remove a line before adding one    
+      if (t <= 50) {
+        t += 1;
+      }
+      else {
+        main.removeChild(document.getElementById('main').firstChild);
+      }
+
+      var wave = t % 50;
+      if (wave <= 25) {
+        indent = wave
+      } else { indent = 50 - wave; }
+
+      //if first line, then leave a blank. try messing with it! (in single quotes is a string)   
+      if (n === 0) {
+        text = ' ';
+      }
+      //here we're doing different things in different cases. note here that whatever text equals is the kind of //line created (path, site, cave, or blank line)     
+      // challenges: make this poem stop after 25 lines; alter the sequences of lines
+      // it seems that there's variability in the stanza length from 2-4. Each Cave line has space on each side of it (n=0 or n=4)
+      else if (n == 1) {
+        paths = 2 + rand_range(2);
+        text = path();
+      }
+      else if (n < paths) {
+        text = site();
+      }
+      else if (n == paths) {
+        text = path();
+      }
+      else if (n == paths + 1) {
+        text = ' ';
+      }
+      else if (n == paths + 2) {
+        text = cave();
+        isCave = true;
+      }
+      else {
+        text = ' ';
+        n = 0;
+      }
+
+      n += 1;
+      t += 1;
+
+      for (let i = 0; i < indent; i++) {
+        spaces += '\u00a0\u00a0\u00a0';
+      }
+
+      text = text.substring(0, 1).toUpperCase() + text.substring(1, text.length);
+      last = document.createElement('div');
+      if (typeof isCave !== 'undefined' && isCave) {
+        last.style.fontStyle = 'italic';
+        last.style.fontStyle = 'oblique';
+        isCave = false;
+      }
+      last.appendChild(document.createTextNode(spaces + text));
+      main.appendChild(last);
+    }
+
+    //rg this function puts it all together (the above functions)
+    //rg it calls the do_line function, producing a line of text
+    //note that you can affect the timing here (1200=milliseconds, or 1.2 seconds between lines)
+    //what i'm not clear about is how the variable counters persist
+    function poem() {
+      setInterval(do_line, 1200);
+    }
+  </script>
+  <title>Tousled Garden</title>
+</head>
+
+<!--rg You could actually delete everything from after the next line all the way through to the last three lines. Or better, comment it out!-->
+
+<!--rg the word poem here is actually calling the JS function "poem" we just saw!-->
+
+<body onload="poem()">
+
+  <!--rg start commenting out here-->
+  <div style="float:right; margin-top:12px; color:#0b3; height:60pt">
+    <div><a href="http://nickm.com">Taroko Gorge &middot; 2009-01-08</a></div>
+    <a href="https://people.rit.edu/hhq8650/235/">Milo Qureshi &middot; 2025-03-10</a><br>
+  </div>
+  <div id="main"></div>
+</body>
+
+</html>
