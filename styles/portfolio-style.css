@@ -1,0 +1,41 @@
+
+#wrapper {
+    display: grid;
+    height: 100vh;
+    grid-template-columns: 30% 50% 20%;
+    grid-template-areas: "header header header"
+                            "name about nav"
+                            "games games games"
+                            "bottom bottom bottom";
+    margin: 1rem;
+
+}
+
+header {
+    grid-area: header;
+}
+
+#name {
+    grid-area: name;
+}
+
+#about {
+    grid-area: about;
+}
+
+#navigation {
+    grid-area: nav;
+}
+
+#games {
+    grid-area: games;
+    margin: 10vh 5vw;
+}
+
+#bottom {
+    grid-area: bottom;
+}
+
+#potrait {
+    width: 15vw;
+}
