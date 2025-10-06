@@ -6,10 +6,24 @@
         "landing landing landing"
         "games games games"
         "bottom bottom bottom";
-    /* margin: 1rem; */
     place-items: center;
     /* min should be 900 */
 }
+
+/* 
+@media screen and (min-width: 800px) {
+    #wrapper {
+        display: grid;
+        height: 100vh;
+        grid-template-columns: 30% 50% 20%;
+        grid-template-areas: "header header header"
+            "name name name"
+            "about about about"
+            "games games games"
+            "bottom bottom bottom";
+        place-items: center;
+    }
+} */
 
 h1,
 h2,
@@ -35,7 +49,8 @@ header {
 #landing {
     grid-area: landing;
     display: grid;
-    grid-template-areas: "name about about";
+    grid-template-areas: "name name name"
+                        "about about about";
     place-items: center;
     background-color: #F5EBE0;
     padding: 5vh 0px;
@@ -43,6 +58,18 @@ header {
     border-radius: 25px;
 }
 
+@media screen and (min-width: 800px) {
+    #landing {
+        grid-area: landing;
+        display: grid;
+        grid-template-areas: "name about about";
+        place-items: center;
+        background-color: #F5EBE0;
+        padding: 5vh 0px;
+        border: 10px solid #F0DBDB;
+        border-radius: 25px;
+    }
+}
 
 #name {
     grid-area: name;
@@ -59,6 +86,11 @@ header {
     width: 100%;
     place-self: center;
 }
+
+#potrait {
+    width: 15vw;
+}
+
 
 #about {
     grid-area: about;
@@ -104,7 +136,7 @@ header {
     grid-area: bottom;
     width: 100%;
     margin: 30px;
-    padding: 5vh;
+    padding: 3vh;
     text-align: center;
     background-color: #F0DBDB;
 }
@@ -114,9 +146,6 @@ ul {
     padding-left: 0px;
 }
 
-#potrait {
-    width: 15vw;
-}
 
 #label {
     margin: 0px;
