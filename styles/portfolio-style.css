@@ -48,6 +48,11 @@ header {
     grid-area: name;
     place-self: center;
     padding: 8px 5vw;
+    margin: 29px;
+    background-color: #68241a;
+    border-radius: 20px;
+    color: white;
+    filter: drop-shadow(8px 8px 1px #DBA39A);
 }
 
 #potrait img {
@@ -64,6 +69,9 @@ header {
     display: flex;
     flex-flow: column wrap;
     justify-content: center;
+    margin: 0 58px;
+    border-radius: 20px;
+    filter: drop-shadow(8px 8px 2px #c9897f);
 }
 
 #navigation {
@@ -94,6 +102,16 @@ header {
 
 #bottom {
     grid-area: bottom;
+    width: 100%;
+    margin: 30px;
+    padding: 5vh;
+    text-align: center;
+    background-color: #F0DBDB;
+}
+
+ul {
+    list-style-type: none;
+    padding-left: 0px;
 }
 
 #potrait {
@@ -102,4 +120,24 @@ header {
 
 #label {
     margin: 0px;
+}
+
+a {
+    color: #82466a;
+}
+
+a:link {
+    color: #82466a;
+}
+
+a:visited {
+    color: #da5b81;
+}
+
+a:hover {
+    color: #eb9696;
+}
+
+a:active {
+    color: #82466a;
 }
