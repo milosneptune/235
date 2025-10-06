@@ -6,26 +6,34 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Milo Qureshi</title>
     <link rel="stylesheet" href="../styles/portfolio-style.css">
+    <style>
+        /* @import url('https://fonts.googleapis.com/css2?family=Chelsea+Market&family=Corben:wght@400;700&family=Jersey+10&family=Josefin+Sans:ital,wght@0,100..700;1,100..700&family=Overpass:ital,wght@0,100..900;1,100..900&family=Pixelify+Sans:wght@400..700&family=Slabo+13px&family=VT323&display=swap'); */
+        @import url('https://fonts.googleapis.com/css2?family=Josefin+Sans:ital,wght@0,100..700;1,100..700&display=swap');
+    </style>
 </head>
 
 <body>
     <div id="wrapper">
-        <header>
-            <h1>Portfolio</h1>
-        </header>
-        <div id="name">
-            <h2>Milo Qureshi</h2>
-            <div id="potrait"><img id="you" src="potrait.jpg" alt="Potrait"></div>
-        </div>
-
-        <div id="about">
-            <h2>Hello!</h2>
-            <p>I'm Milo Qureshi, I'm a rising computing junior studying Game Design and Development at Rochester
-                Institute of Technology. I have a wide variety of skills, such as programming, and 3D and 2D digital
-                design. I
-                have strong skills in using object-oriented languages, Unity, and Unreal Engine.</p>
-        </div>
-
+        <!-- <section id="landing"> -->
+            <header>
+                <h1>Portfolio</h1>
+            </header>
+            <section id="landing">
+                <div id="name">
+                    <h2>Milo Qureshi</h2>
+                    <div id="potrait"><img id="you" src="potrait.jpg" alt="Potrait"></div>
+                </div>
+        
+                <div id="about">
+                    <h2>Hello!</h2>
+                    <p>I'm Milo Qureshi, I'm a rising computing junior studying Game Design and Development at Rochester
+                        Institute of Technology. I have a wide variety of skills, such as programming, 3D and 2D digital
+                        design. I
+                        have a strong understanding in using object-oriented languages, Unity, and Unreal Engine.</p>
+                </div>
+            </section>
+        <!-- </section> -->
+        <!-- 
         <div id="navigation">
             <menu>Contents
                 <li>About</li>
@@ -34,48 +42,60 @@
                 <li>Programming</li>
                 <li>Art</li>
             </menu>
-        </div>
+        </div> -->
 
         <section id="games">
-            <h4>
-                <p>Below are some of my projects!</p>
-            </h4>
             <div>
-                <h3>echoes</h3>
-                <h4>Jelly Beach</h4>
-                <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Excepturi consequuntur enim dignissimos
-                    facilis
-                    nesciunt? Aspernatur saepe atque et! Facere facilis ipsam adipisci repellendus, quibusdam enim vitae
-                    velit
-                    aut amet autem?</p>
+                <h2 id="label">Below are some of my projects!</h2>
+                <h3>echoes - Jelly Beach</h3>
+                <div class="inside">
+                    <img id="echoes" alt="jelly beach gameplay" src="potrait.jpg">
+                    <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Excepturi consequuntur enim dignissimos
+                        facilis
+                        nesciunt? Aspernatur saepe atque et! Facere facilis ipsam adipisci repellendus, quibusdam enim
+                        vitae
+                        velit
+                        aut amet autem?</p>
+                </div>
             </div>
 
             <div>
                 <h3>Plinko</h3>
-                <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Adipisci minima, voluptas odio reiciendis
-                    facere,
-                    iste laboriosam esse laudantium aspernatur veniam inventore nam atque? Nesciunt vero repudiandae
-                    illo.
-                    Repellendus, magnam quisquam.</p>
+                <div class="inside">
+                    <img id="plinko" alt="plinko gameplay" src="potrait.jpg">
+                    <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Adipisci minima, voluptas odio
+                        reiciendis
+                        facere,
+                        iste laboriosam esse laudantium aspernatur veniam inventore nam atque? Nesciunt vero repudiandae
+                        illo.
+                        Repellendus, magnam quisquam.</p>
+                </div>
             </div>
 
             <div>
                 <h3>Rig My Roll</h3>
-                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Similique inventore aut voluptate
-                    doloremque
-                    nisi,
-                    aperiam corrupti reprehenderit placeat at quo porro culpa maxime quidem dolores quae neque optio
-                    voluptates
-                    omnis?</p>
+                <div class="inside">
+                    <img id="rigroll" alt="rig my roll gameplay" src="potrait.jpg">
+                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Similique inventore aut voluptate
+                        doloremque
+                        nisi,
+                        aperiam corrupti reprehenderit placeat at quo porro culpa maxime quidem dolores quae neque optio
+                        voluptates
+                        omnis?</p>
+                </div>
             </div>
 
             <div>
                 <h3>Starlit Wanderer</h3>
-                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Impedit fuga non consequuntur labore qui
-                    laudantium,
-                    numquam excepturi recusandae quod consectetur neque voluptatem et nesciunt at illum quasi error ea
-                    nisi.
-                </p>
+                <div class="inside">
+                    <img id="wanderer" alt="starlit wanderer gameplay" src="potrait.jpg">
+                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Impedit fuga non consequuntur labore qui
+                        laudantium,
+                        numquam excepturi recusandae quod consectetur neque voluptatem et nesciunt at illum quasi error
+                        ea
+                        nisi.
+                    </p>
+                </div>
             </div>
         </section>
 

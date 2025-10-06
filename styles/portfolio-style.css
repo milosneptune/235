@@ -1,26 +1,69 @@
-
 #wrapper {
     display: grid;
     height: 100vh;
     grid-template-columns: 30% 50% 20%;
     grid-template-areas: "header header header"
-                            "name about nav"
-                            "games games games"
-                            "bottom bottom bottom";
-    margin: 1rem;
+        "landing landing landing"
+        "games games games"
+        "bottom bottom bottom";
+    /* margin: 1rem; */
+    place-items: center;
+    /* min should be 900 */
+}
 
+h1,
+h2,
+h3,
+h4 {
+    font-family: 'Josefin Sans', 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+}
+
+body {
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    background-color: #F5EBE0;
+    color: #68241a;
+    margin: auto;
 }
 
 header {
     grid-area: header;
+    width: 100%;
+    background-color: #F0DBDB;
+    text-align: center;
 }
+
+#landing {
+    grid-area: landing;
+    display: grid;
+    grid-template-areas: "name about about";
+    place-items: center;
+    background-color: #F5EBE0;
+    padding: 5vh 0px;
+    border: 10px solid #F0DBDB;
+    border-radius: 25px;
+}
+
 
 #name {
     grid-area: name;
+    place-self: center;
+    padding: 8px 5vw;
+}
+
+#potrait img {
+    width: 100%;
+    place-self: center;
 }
 
 #about {
     grid-area: about;
+    padding: 0px 5vw;
+    height: 100%;
+    background-color: #DBA39A;
+    text-align: center;
+    display: flex;
+    flex-flow: column wrap;
+    justify-content: center;
 }
 
 #navigation {
@@ -30,6 +73,23 @@ header {
 #games {
     grid-area: games;
     margin: 10vh 5vw;
+    background-color: #F5EBE0;
+}
+
+#games div {
+    padding: 10px 0px;
+}
+
+#games div img {
+    width: 30vh;
+}
+
+.inside {
+    display: flex;
+}
+
+.inside p {
+    padding: 3vw;
 }
 
 #bottom {
@@ -38,4 +98,8 @@ header {
 
 #potrait {
     width: 15vw;
+}
+
+#label {
+    margin: 0px;
 }
