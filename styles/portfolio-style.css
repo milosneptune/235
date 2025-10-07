@@ -50,7 +50,7 @@ header {
     grid-area: landing;
     display: grid;
     grid-template-areas: "name name name"
-                        "about about about";
+        "about about about";
     place-items: center;
     background-color: #F5EBE0;
     padding: 5vh 0px;
@@ -58,7 +58,7 @@ header {
     border-radius: 25px;
 }
 
-@media screen and (min-width: 820px) {
+@media screen and (min-width: 870px) {
     #landing {
         grid-template-areas: "name about about";
     }
@@ -67,12 +67,12 @@ header {
 #name {
     grid-area: name;
     place-self: center;
-    padding: 8vh 5vw;
+    padding: 4vh 5vw;
     margin: 1vw 5vw;
     background-color: #68241a;
     border-radius: 20px;
     color: white;
-    filter: drop-shadow(8px 8px 1px #DBA39A); 
+    filter: drop-shadow(8px 8px 1px #DBA39A);
     width: 70%;
     display: flex;
     justify-content: space-evenly;
@@ -80,6 +80,8 @@ header {
 
 #name h2 {
     padding: 0 10px;
+    align-self: center;
+    font-size: 5vw;
 }
 
 #potrait img {
@@ -92,31 +94,39 @@ header {
     display: flex;
 }
 
-@media screen and (min-width: 820px) {
+@media screen and (min-width: 870px) {
     #name {
         grid-area: name;
         place-self: center;
         padding: 8vh 5vw;
         margin: 1vw 5vw;
         width: 50%;
+        text-align: left;
     }
+
     #potrait {
         /* width: 100%; */
         width: 15vw;
     }
-}
 
+    #potrait img {
+        min-width: 150px;
+    }
+
+    #name h2 {
+        align-self: center;
+        font-size: 24px;
+    }
+}
 
 #about {
     grid-area: about;
-    padding: 0px 5vw;
-    height: 60%;
+    padding: 5% 5vw;
     background-color: #DBA39A;
     text-align: center;
-    /* display: flex; */
+    display: flex;
     flex-flow: column wrap;
-    justify-content: center;
-    margin: 100px 5vw;
+    margin: 10% 5vw;
     border-radius: 20px;
     filter: drop-shadow(8px 8px 2px #c9897f);
 }
