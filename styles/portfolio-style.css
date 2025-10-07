@@ -58,28 +58,28 @@ header {
     border-radius: 25px;
 }
 
-@media screen and (min-width: 800px) {
+@media screen and (min-width: 820px) {
     #landing {
-        grid-area: landing;
-        display: grid;
         grid-template-areas: "name about about";
-        place-items: center;
-        background-color: #F5EBE0;
-        padding: 5vh 0px;
-        border: 10px solid #F0DBDB;
-        border-radius: 25px;
     }
 }
 
 #name {
     grid-area: name;
     place-self: center;
-    padding: 8px 5vw;
-    margin: 29px;
+    padding: 8vh 5vw;
+    margin: 1vw 5vw;
     background-color: #68241a;
     border-radius: 20px;
     color: white;
-    filter: drop-shadow(8px 8px 1px #DBA39A);
+    filter: drop-shadow(8px 8px 1px #DBA39A); 
+    width: 70%;
+    display: flex;
+    justify-content: space-evenly;
+}
+
+#name h2 {
+    padding: 0 10px;
 }
 
 #potrait img {
@@ -88,20 +88,35 @@ header {
 }
 
 #potrait {
-    width: 15vw;
+    width: 30vw;
+    display: flex;
+}
+
+@media screen and (min-width: 820px) {
+    #name {
+        grid-area: name;
+        place-self: center;
+        padding: 8vh 5vw;
+        margin: 1vw 5vw;
+        width: 50%;
+    }
+    #potrait {
+        /* width: 100%; */
+        width: 15vw;
+    }
 }
 
 
 #about {
     grid-area: about;
     padding: 0px 5vw;
-    height: 100%;
+    height: 60%;
     background-color: #DBA39A;
     text-align: center;
-    display: flex;
+    /* display: flex; */
     flex-flow: column wrap;
     justify-content: center;
-    margin: 0 58px;
+    margin: 100px 5vw;
     border-radius: 20px;
     filter: drop-shadow(8px 8px 2px #c9897f);
 }
