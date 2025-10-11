@@ -103,7 +103,6 @@ header {
 
 @media screen and (min-width: 870px) {
     #name {
-        grid-area: name;
         place-self: center;
         padding: 8vh 5vw;
         margin: 1vw 5vw;
@@ -153,14 +152,10 @@ header {
 }
 
 #games div img {
-    width: 30vh;
+    width: 20vw;
 }
 
 .inside {
-    display: flex;
-}
-
-.inside p {
     padding: 3vw;
 }
 
