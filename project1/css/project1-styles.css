@@ -1,15 +1,21 @@
+body{
+    margin: 0;
+}
 #wrapper {
     display: grid;
     height: 100vh;
-    grid-template-columns: 40% 60%;
-    /* grid-template-areas: "header header"; */
+    grid-template-rows: 1/4;
+    grid-template-columns: 55% 45%;
+    grid-template-areas: "header header"
+                        "left right";
     
 }
 
 h1 {
-    /* grid-area: header; */
+    grid-area: header;
     font-style: italic;
     font-size: 15vw;
+    margin: auto;
 }
 
 h2 {
@@ -23,3 +29,31 @@ h2, h3 {
     border-top: 1.5px solid black;
 }
 
+#rightside {
+    grid-area: right;
+    margin-left: 25px;
+    margin-right: 8px;
+}
+
+#rightside img {
+    float: right;
+    width: 40%;
+}
+
+#rightside h3 {
+    clear: both;
+}
+
+#leftside {
+    grid-area: left;
+}
+
+#leftside img {
+    float: left;
+}
+
+#bigguy {
+    width: 100%;
+    /* max-width: 650px; */
+    /* the gap will be fixed with media queries later */
+}
