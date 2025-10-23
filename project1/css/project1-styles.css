@@ -1,0 +1,25 @@
+#wrapper {
+    display: grid;
+    height: 100vh;
+    grid-template-columns: 40% 60%;
+    /* grid-template-areas: "header header"; */
+    
+}
+
+h1 {
+    /* grid-area: header; */
+    font-style: italic;
+    font-size: 15vw;
+}
+
+h2 {
+    letter-spacing: 5px;
+}
+
+h2, h3 {
+    color: brown;
+    font-style: italic;
+    border-bottom: 1.5px solid black;
+    border-top: 1.5px solid black;
+}
+
