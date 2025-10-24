@@ -1,14 +1,15 @@
-body{
+body {
     margin: 0;
 }
+
 #wrapper {
     display: grid;
     height: 100vh;
     grid-template-rows: 1/4;
     grid-template-columns: 55% 45%;
     grid-template-areas: "header header"
-                        "left right";
-    
+        "left right";
+
 }
 
 h1 {
@@ -22,7 +23,8 @@ h2 {
     letter-spacing: 5px;
 }
 
-h2, h3 {
+h2,
+h3 {
     color: brown;
     font-style: italic;
     border-bottom: 1.5px solid black;
@@ -42,6 +44,20 @@ h2, h3 {
 
 #rightside h3 {
     clear: both;
+}
+
+#rightside #double {
+    display: flex;
+    flex-flow: row nowrap;
+}
+
+.flex-50 {
+    flex: 1 1 50%;
+
+}
+
+#layered {
+    object-fit: contain;
 }
 
 #leftside {
