@@ -1,0 +1,100 @@
+body {
+    margin: 0;
+}
+
+#wrapper {
+    display: grid;
+    height: 100vh;
+    grid-template-rows: 1/4;
+    grid-template-columns: 55% 45%;
+    grid-template-areas: "header header"
+    "content content";
+
+}
+
+#content {
+    grid-area: content;
+    display: grid;
+    height: 100vh;
+    grid-template-columns: 55% 45%;
+    grid-template-areas: "left right";
+    margin-top: 15%;
+}
+
+h1 {
+    grid-area: header;
+    font-style: italic;
+    font-size: 15vw;
+    margin: auto;
+    position: absolute;
+    font-family: "Lobster", Arial, Helvetica, sans-serif;
+}
+
+h2 {
+    letter-spacing: 5px;
+}
+
+h2,
+h3 {
+    color: brown;
+    font-style: italic;
+    border-bottom: 1.5px solid black;
+    border-top: 1.5px solid black;
+}
+
+#rightside {
+    grid-area: right;
+    margin-left: 25px;
+    margin-right: 8px;
+}
+
+#rightside img {
+    float: right;
+    width: 40%;
+}
+
+#rightside h3 {
+    clear: both;
+}
+
+#rightside #double {
+    display: flex;
+    flex-flow: row nowrap;
+}
+
+.flex-50 {
+    flex: 1 1 50%;
+}
+
+.flex-50 p {
+    padding: 10px;
+}
+
+#layered {
+    object-fit: contain;
+    margin: 10px;
+}
+
+#leftside {
+    grid-area: left;
+}
+
+#leftside img {
+    float: left;
+}
+
+#bigguy {
+    width: 100%;
+    /* position: absolute; */
+    /* max-width: 650px; */
+    /* the gap will be fixed with media queries later */
+}
+
+#underbig {
+    clear: both;
+    padding: 10px;
+}
+
+#underbig img {
+    padding-right: 10px;
+}
