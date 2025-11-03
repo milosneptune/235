@@ -16,7 +16,8 @@ h1 {
     grid-area: header;
     font-style: italic;
     font-size: 15vw;
-    margin: auto;
+    margin: 10vw;
+    
 }
 
 h2 {

@@ -1,15 +1,21 @@
 body {
     margin: 0;
+    font-family: "Neuton", Arial, Helvetica, sans-serif;
+    background-color: #F2F2F2;
+}
+
+html,
+body {
+    cursor: url("http://www.rw-designer.com/cursor-extern.php?id=187379"), auto;
+    /* just change the cursor.ico path to your location */
 }
 
 #wrapper {
     display: grid;
-    height: 100vh;
-    grid-template-rows: 1/4;
+    /* height: 100vh;
     grid-template-columns: 55% 45%;
     grid-template-areas: "header header"
-    "content content";
-
+    "content content"; */
 }
 
 #content {
@@ -23,11 +29,16 @@ body {
 
 h1 {
     grid-area: header;
+    color: #ce9f3a;
     font-style: italic;
     font-size: 15vw;
     margin: auto;
     position: absolute;
     font-family: "Lobster", Arial, Helvetica, sans-serif;
+    margin-left: 10vw;
+    /* background-image: url("../media/banner.gif");
+    background-repeat: no-repeat;
+    background-size: 200px; */
 }
 
 h2 {
@@ -36,10 +47,11 @@ h2 {
 
 h2,
 h3 {
-    color: brown;
+    color: #f371f3;
     font-style: italic;
-    border-bottom: 1.5px solid black;
-    border-top: 1.5px solid black;
+    border-bottom: 2px solid #edbafa;
+    border-top: 2px solid #edbafa;
+    font-family: "Momo Signature", Arial, Helvetica, sans-serif;
 }
 
 #rightside {
@@ -48,9 +60,18 @@ h3 {
     margin-right: 8px;
 }
 
-#rightside img {
+#rightside img:not(.banner) {
     float: right;
     width: 40%;
+}
+
+/* #banner {
+    width: 400px;
+} */
+
+.banner {
+    width: 25vw;
+    padding: 2px;
 }
 
 #rightside h3 {
@@ -64,6 +85,7 @@ h3 {
 
 .flex-50 {
     flex: 1 1 50%;
+    width: 40%;
 }
 
 .flex-50 p {
@@ -79,7 +101,7 @@ h3 {
     grid-area: left;
 }
 
-#leftside img {
+#leftside img{
     float: left;
 }
 
@@ -95,6 +117,7 @@ h3 {
     padding: 10px;
 }
 
-#underbig img {
+#underbig img:not(.banner) {
     padding-right: 10px;
+    width: 20%;
 }
