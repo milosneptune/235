@@ -1,7 +1,7 @@
 body {
     margin: 0;
     font-family: "Neuton", Arial, Helvetica, sans-serif;
-    background-color: #F2F2F2;
+    background-color: #fff4fb;
 }
 
 html,
@@ -50,8 +50,8 @@ h3,
 h4 {
     color: #f371f3;
     font-style: italic;
-    border-bottom: 2px solid #edbafa;
-    border-top: 2px solid #edbafa;
+    border-bottom: 3px solid #edbafa;
+    border-top: 3px solid #edbafa;
     font-family: "Momo Signature", Arial, Helvetica, sans-serif;
     padding: 10px;
 }
@@ -131,4 +131,31 @@ p {
 
 #layer {
     margin-top: 10%;
+}
+
+ul {
+    list-style-image: url("../media/bow.png");
+    /* list-style-position: inside; */
+    list-style-type: square;
+
+}
+
+a {
+    color: #aa1f8e;
+}
+
+a:link {
+    color: #aa1f8e;
+}
+
+a:visited {
+    color: #da5bc5;
+}
+
+a:hover {
+    color: #f1a3ff;
+}
+
+a:active {
+    color: #dd2694;
 }
