@@ -46,12 +46,14 @@ h2 {
 }
 
 h2,
-h3 {
+h3,
+h4 {
     color: #f371f3;
     font-style: italic;
     border-bottom: 2px solid #edbafa;
     border-top: 2px solid #edbafa;
     font-family: "Momo Signature", Arial, Helvetica, sans-serif;
+    padding: 10px;
 }
 
 #rightside {
@@ -120,4 +122,13 @@ h3 {
 #underbig img:not(.banner) {
     padding-right: 10px;
     width: 20%;
+}
+
+p {
+    padding-top: 10px;
+    padding-bottom: 10px;
+}
+
+#layer {
+    margin-top: 10%;
 }
