@@ -8,24 +8,23 @@ let results = "";
 
 xhr.addEventListener("readystatechange", function () {
   if (this.readyState === 4) {
-    // console.log(this.responseText);
     console.log(xhr.responseText);
     let obj = JSON.parse(xhr.responseText);
-    results = obj.data;
+    // results = obj.data;
 
-    // console.log("results.length = " + results.length);
     let bigString = "";
-    // let line = results;
-    // string1 += line;
-    // for (let i = 0; i < results.length; i++) {
-      // let result = results[i];
-      let id = results.id;
-      let name = results.name;
-      let line= `<div class='result'>ID='${id}' title='${name}'</div>`;
-      bigstring += line;
-document.querySelector("#content").innerHTML = bigString;
 
+    // for (let i = 0; i < results.length; i++) {
+    // let id = results[1];
     // }
+
+    let id = obj.id;
+    let name = obj.name;
+    let cat = obj.type.category;
+
+    let line = `<div class='result'>ID = ${id}<br>Name = ${name}<br>${cat}</brf></div>`;
+    bigString += line;
+    document.querySelector("#content").innerHTML = bigString;
   }
 });
 
