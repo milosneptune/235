@@ -8,27 +8,33 @@ let results = "";
 
 xhr.addEventListener("readystatechange", function () {
   if (this.readyState === 4) {
-    console.log(xhr.responseText);
+    // console.log(xhr.responseText);
     let obj = JSON.parse(xhr.responseText);
-    // results = obj.data;
-
+    results = obj.data;
+    console.log(results);
     let bigString = "";
 
     // for (let i = 0; i < results.length; i++) {
     // let id = results[1];
     // }
 
-    let id = obj.id;
-    let name = obj.name;
-    let cat = obj.type.category;
+    // let id = obj.id;
+    // let name = obj.data.name;
+    let name = results[0].name;
+    // let atk = obj.
+    console.log(name);
 
-    let line = `<div class='result'>ID = ${id}<br>Name = ${name}<br>${cat}</brf></div>`;
+    // let cat = obj.type.category;
+
+    // let line = `<div class='result'>ID = ${id}<br>Name = ${name}<br></brf></div>`;
+    let line = `<div class='result'>Name = ${name}<br></brf></div>`;
     bigString += line;
     document.querySelector("#content").innerHTML = bigString;
   }
 });
 
 // xhr.open("GET", "https://ffxivcollect.com/api/spells");
-xhr.open("GET", "https://ffxivcollect.com/api/relics/1675");
+xhr.open("GET", "https://db.ygoprodeck.com/api/v7/cardinfo.php?name=Dark%20Magician");
+// https://ffxivcollect.com/api/relics/1675
 // document.querySelector("#content").innerHTML = bigString;
 xhr.send();
