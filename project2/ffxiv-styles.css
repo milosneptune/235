@@ -1,0 +1,28 @@
+#filters {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    margin: auto;
+}
+
+#filters .widgets {
+    padding: 0 1vw;
+    flex-shrink: 4;
+}
+
+#search-button {
+    padding: 1vw;
+}
+
+#content {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+    align-content: space-around;
+}
+
+.result {
+    margin: 5vh 3vw;
+    padding: 6vw;
+    border: 2px solid black;
+}

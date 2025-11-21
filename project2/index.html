@@ -13,6 +13,7 @@
         <h1>FFXIV Search</h1>
     </header>
 
+    <div id="filters">
     <div class="widgets">
         Name <input id="searchterm" type="text" size="20" maxlength="20" />
     </div>
@@ -29,9 +30,25 @@
     </div>
 
     <div class="widgets">
+        Category
+        <select id="category">
+            <option value="relics">Relics</option>
+            <option value="fashions" selected>Fashion</option>
+            <option value="mounts">Mounts</option>
+            <option value="emotes">Emotes</option>
+            <option value="hairstyles">Hairstyles</option>
+            <option value="armoires">Armoires</option>
+            <option value="minions">Minions</option>
+            <option value="spells">Spells</option>
+        </select>
+    </div>
+    </div>
+
+    <div class="widgets" id="search-button">
         <button type="button" id="search" class="green">Search<br />:-)</button>
     </div>
     <div id="status">Ready to Search!</div>
+    
     <hr>
 
     <h2>Results</h2>
