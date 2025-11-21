@@ -1,3 +1,8 @@
+body {
+    background-color: #020724;
+    color: white;
+}
+
 #filters {
     display: flex;
     flex-direction: row;
@@ -24,5 +29,5 @@
 .result {
     margin: 5vh 3vw;
     padding: 6vw;
-    border: 2px solid black;
+    border: 2px solid white;
 }
