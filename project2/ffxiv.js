@@ -7,8 +7,21 @@
 // let bigString = "";
 
 // hooks up event handler to window onload
-window.onload = (e) => { document.querySelector("#search").onclick = searchButtonClicked };
+window.onload = (e) => {
+  document.querySelector("#search").onclick = searchButtonClicked;
+  loadLastSearchTerm(); // Load the last search term when page loads
+};
+
 let displayTerm = ""; // stores what user will search for
+
+function loadLastSearchTerm() {
+  // load the last search term from localStorage and populate the input field
+  const lastSearchTerm = localStorage.getItem("lastSearchTerm");
+  if (lastSearchTerm) {
+    document.querySelector("#searchterm").value = lastSearchTerm;
+  }
+  document.querySelector("#history").innerHTML = "Last Searched: " + lastSearchTerm;
+}
 
 function searchButtonClicked() {
   console.log("searchButtonClicked() called");
@@ -22,6 +35,9 @@ function searchButtonClicked() {
   let term = document.querySelector("#searchterm").value; // .value gives us the wtv is in the text input field
   displayTerm = term;
   term = term.trim();
+
+  // save the search term to localStorage
+  localStorage.setItem("lastSearchTerm", term);
 
   // encode spaces and spc chars
   // ex, a space becomes %20
@@ -105,5 +121,5 @@ function dataLoaded(e) {
 }
 
 function dataError(e) {
-    console.log("Error occurred!");
+  console.log("Error occurred!");
 }

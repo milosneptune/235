@@ -4,61 +4,70 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>FFXIV</title>
+    <title>FFXIV Collection Search</title>
     <link rel="stylesheet" href="ffxiv-styles.css">
 </head>
 
 <body>
     <header>
-        <h1>FFXIV Search</h1>
+        <h1>FFXIV Collection Search</h1>
     </header>
 
-    <div id="filters">
-    <div class="widgets">
-        Name <input id="searchterm" type="text" size="20" maxlength="20" />
-    </div>
+    <main>
+        <section id="search-section">
+            <div id="filters">
+                <div class="widgets">
+                    <label for="searchterm">Search Term</label>
+                    <input id="searchterm" type="text" placeholder="Enter search term..." />
+                </div>
 
-    <div class="widgets">
-        # of Results
-        <select id="limit">
-            <option value="5">5</option>
-            <option value="10" selected>10</option>
-            <option value="25">25</option>
-            <option value="50">50</option>
-            <option value="100">100</option>
-        </select>
-    </div>
+                <div class="widgets">
+                    <label for="limit">Results Limit</label>
+                    <select id="limit">
+                        <option value="5">5</option>
+                        <option value="10" selected>10</option>
+                        <option value="25">25</option>
+                        <option value="50">50</option>
+                        <option value="100">100</option>
+                    </select>
+                </div>
 
-    <div class="widgets">
-        Category
-        <select id="category">
-            <option value="relics">Relics</option>
-            <option value="fashions" selected>Fashion</option>
-            <option value="mounts">Mounts</option>
-            <option value="emotes">Emotes</option>
-            <option value="hairstyles">Hairstyles</option>
-            <option value="armoires">Armoires</option>
-            <option value="minions">Minions</option>
-            <option value="spells">Spells</option>
-        </select>
-    </div>
-    </div>
+                <div class="widgets">
+                    <label for="category">Category</label>
+                    <select id="category">
+                        <option value="relics">Relics</option>
+                        <option value="fashions" selected>Fashion</option>
+                        <option value="mounts">Mounts</option>
+                        <option value="emotes">Emotes</option>
+                        <option value="hairstyles">Hairstyles</option>
+                        <option value="armoires">Armoires</option>
+                        <option value="minions">Minions</option>
+                        <option value="spells">Spells</option>
+                    </select>
+                </div>
 
-    <div class="widgets" id="search-button">
-        <button type="button" id="search" class="green">Search<br />:-)</button>
-    </div>
-    <div id="status">Ready to Search!</div>
-    
-    <hr>
+                <div class="widgets" id="search-button">
+                    <button type="button" id="search" class="green">Search</button>
+                </div>
+            </div>
+        </section>
 
-    <h2>Results</h2>
-    <div id="content">
-        <p>No data yet!</p>
-    </div>
+        <section id="status-section">
+            <div id="status">Ready to Search!</div>
+            <div id="history"></div>
+        </section>
 
+        <hr>
+
+        <section id="results-section">
+            <h2>Search Results</h2>
+            <div id="content">
+                <p>No data yet! Awaiting your command...</p>
+            </div>
+        </section>
+    </main>
 
     <script src="ffxiv.js"></script>
-
 </body>
 
 </html>
